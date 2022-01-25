@@ -1,0 +1,48 @@
+.home-wrapper {
+    height: 100%;
+    background-color: #eeeeee;
+}
+.top-wrapper {
+    width: 100%;
+
+}
+
+.image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.home-image {
+    width: 716rpx;
+    height: 180rpx;
+    border-top-left-radius: 10rpx;
+    border-top-right-radius: 10rpx;
+    margin-top: 16rpx;
+    margin-bottom: 26rpx;
+}
+
+.logo-wrapper {
+    position: relative;
+}
+
+.content {
+    width: 716rpx;
+    height: 80rpx;
+    position: absolute;
+    top: -26rpx;
+    left: 19rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(#eeeeee 50%, #ffffff 50%);
+    background-size: 100% 5rpx;
+    border-bottom-left-radius: 10rpx;
+    border-bottom-right-radius: 10rpx;
+}
+
+.pages-wrapper {
+    padding-top: 60rpx;
+}

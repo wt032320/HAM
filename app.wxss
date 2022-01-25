@@ -1,0 +1,22 @@
+/**app.wxss**/
+@import './images/icon/iconfont.wxss';
+
+@font-face {
+  font-family: 'iconfont';  /* project id 3161864 */
+  src: url('');
+  src: url('?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_3161864_wazxfhgq8bf.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_3161864_wazxfhgq8bf.woff') format('woff'),
+  url('//at.alicdn.com/t/font_3161864_wazxfhgq8bf.ttf') format('truetype'),
+  url('#iconfont') format('svg');
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

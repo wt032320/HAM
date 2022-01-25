@@ -1,0 +1,19 @@
+<view class="home-wrapper">
+    <view class="top-wrapper">
+        <view class="image-wrapper">
+            <image
+                class="home-image"
+                src="/images/backgroundImage/bgImage.jpg"
+            ></image> 
+        </view>
+       <view class="logo-wrapper">
+            <view class="content">
+                <icon class='iconfont icon-xuexizhongxin' />
+                <text>HAM在线测评系统</text>
+            </view>
+        </view> 
+    </view>
+    <view class="pages-wrapper">
+        pages
+    </view>
+</view>
