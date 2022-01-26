@@ -1,0 +1,8 @@
+
+.item-wrapper {
+    width: 716rpx;
+    height: 220rpx;
+    margin: 0rpx 19rpx 19rpx 19rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+}

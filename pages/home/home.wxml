@@ -8,12 +8,21 @@
         </view>
        <view class="logo-wrapper">
             <view class="content">
-                <icon class='iconfont icon-xuexizhongxin' />
+                <iconfont class="icon1"  name="xuexizhongxin" />
                 <text>HAM在线测评系统</text>
             </view>
         </view> 
     </view>
     <view class="pages-wrapper">
-        pages
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
+        <HomeItem></HomeItem>
     </view>
 </view>

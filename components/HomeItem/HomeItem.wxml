@@ -1,0 +1,7 @@
+<view class="item-wrapper">
+    <text class="title">在线测试</text>
+    <view>
+        <iconfont name="ceshi" />
+        <text>每日一测</text>
+    </view>
+</view>
