@@ -8,21 +8,17 @@
         </view>
        <view class="logo-wrapper">
             <view class="content">
-                <iconfont class="icon1"  name="xuexizhongxin" />
-                <text>HAM在线测评系统</text>
+                <iconfont class="icon1" name="zhinengxuexipingtai" />
+                <text class="title">HAM在线测评系统</text>
             </view>
         </view> 
     </view>
     <view class="pages-wrapper">
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
-        <HomeItem></HomeItem>
+        <HomeItem
+            wx:for="{{itemInfo}}"
+            wx:key="unique"
+            itemInfo="{{item}}"
+        >
+        </HomeItem>
     </view>
 </view>

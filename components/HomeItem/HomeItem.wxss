@@ -6,3 +6,29 @@
     background-color: #fff;
     border-radius: 10rpx;
 }
+
+.title {
+    display: inline-block;
+    margin: 19rpx 0 0 19rpx;
+    font-size: medium;
+}
+.contents-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content-wrapper {
+    width: 150rpx;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: inline-block;
+    font-size: small;
+    font-weight: 300;
+} 

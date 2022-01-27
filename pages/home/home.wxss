@@ -47,6 +47,10 @@
     margin: 26rpx;
 }
 
+.title {
+    font-size: large;
+}
+
 .pages-wrapper {
     overflow: hidden;
     padding-top: 73rpx;

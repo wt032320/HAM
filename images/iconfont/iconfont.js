@@ -1,6 +1,6 @@
 Component({
   properties: {
-    // ceshi | xuexizhongxin
+    // shoucang | shoucang1 | yonghuxinxiguanli | shiti1 | zhinengxuexipingtai | luntanzhongxin | kaoshi_1 | ceshi | xuexizhongxin
     name: {
       type: String,
     },

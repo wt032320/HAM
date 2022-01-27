@@ -4,7 +4,7 @@ Component({
      * 组件的属性列表
      */
     properties: {
-
+        itemInfo: Object
     },
 
     /**
@@ -18,6 +18,12 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        
+    },
 
+    lifetimes: {
+        ready: function() {
+            // console.log(this.properties.itemInfo)
+        }
     }
 })

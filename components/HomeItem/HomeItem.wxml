@@ -1,7 +1,13 @@
 <view class="item-wrapper">
-    <text class="title">在线测试</text>
-    <view>
-        <iconfont name="ceshi" />
-        <text>每日一测</text>
+    <text class="title">{{itemInfo.title}}</text>
+    <view class="contents-wrapper">
+        <view
+            wx:for="{{itemInfo.item}}"
+            wx:key="unique"
+            class="content-wrapper"
+        >
+            <iconfont name="{{item.icon}}" class="icon"/>
+            <text class="content">{{item.content}}</text>
+        </view>
     </view>
 </view>
