@@ -18,7 +18,13 @@ Component({
      * 组件的方法列表
      */
     methods: {
-        
+        bindViewTap(e) {
+            const router = e.currentTarget.dataset.router
+            console.log(router)
+            wx.navigateTo({
+              url: router,
+            })
+        },
     },
 
     lifetimes: {

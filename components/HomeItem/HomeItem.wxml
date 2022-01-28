@@ -4,6 +4,8 @@
         <view
             wx:for="{{itemInfo.item}}"
             wx:key="unique"
+            data-router="{{item.router}}"
+            bindtap="bindViewTap"
             class="content-wrapper"
         >
             <iconfont name="{{item.icon}}" class="icon"/>
