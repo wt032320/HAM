@@ -1,0 +1,22 @@
+<!--components/CategoryItem/CategoryItem.wxml-->
+
+<view class="category-wrapper">
+    <view class="left-wrap">
+        <view class="title">
+            数学运算
+        </view>
+        <view class="statistics">
+            <view class="left">
+                <iconfont name="shuliangtongji" class="icon"/>
+                <view class="content">题量 10/1231</view>
+            </view>
+            <view class="right">
+                <iconfont name="zhengqueshuai" class="icon"/>
+                <view class="content">正确率 10%</view>
+            </view>
+        </view>
+    </view>
+    <view class="right-wrap">
+        <button class="button" size="mini">练习</button>
+    </view>
+</view>

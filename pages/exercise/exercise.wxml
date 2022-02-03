@@ -1,2 +1,5 @@
 <!--pages/exercise/exercise.wxml-->
-<text>pages/exercise/exercise.wxml</text>
+
+<view class="exercise-wrapper">
+    <CategoryItem></CategoryItem>
+</view>

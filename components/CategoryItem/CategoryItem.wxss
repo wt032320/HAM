@@ -1,0 +1,35 @@
+/* components/CategoryItem/CategoryItem.wxss */
+
+.category-wrapper {
+    width: 716rpx;
+    height: 180rpx;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 19rpx;
+    background-color: #fff;
+    border-radius: 10rpx;
+}
+
+.left-wrap {
+    width: 550rpx;
+    height: 95%;
+}
+
+.statistics {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.left
+.right {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.content {
+    display: inline;
+}
