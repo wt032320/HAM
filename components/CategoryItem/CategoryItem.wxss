@@ -22,14 +22,27 @@
     align-items: center;
 }
 
-.left
-.right {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.title {
+    margin: 24rpx;
+    font-size: large;
 }
 
+.icon {
+    margin-left: 14rpx;
+}
 
 .content {
-    display: inline;
+    font-weight: 300;
+}
+
+.content-l {
+    width: 320rpx;
+}
+
+.content-r {
+    width: 220rpx;
+}
+.button {
+    margin-left: 38rpx;
+    background-color: #3399CC;
 }

@@ -61,6 +61,59 @@ const itemInfo = [
     }
 ]
 
+const examItemInfo = [
+    {
+        title: '数学运算',
+        total_quantity: 1331,
+        finish_quantity: 10,
+        corrent_rate: '10%',
+        unique: 'unique_0'
+    },
+    {
+        title: '逻辑填空',
+        total_quantity: 1211,
+        finish_quantity: 1211,
+        corrent_rate: '65%',
+        unique: 'unique_1'
+    },
+    {
+        title: '常识判断',
+        total_quantity: 1451,
+        finish_quantity: 0,
+        corrent_rate: '0%',
+        unique: 'unique_2'
+    },
+    {
+        title: '片段阅读',
+        total_quantity: 1635,
+        finish_quantity: 1456,
+        corrent_rate: '2%',
+        unique: 'unique_3'
+    },
+    {
+        title: '类比推理',
+        total_quantity: 1315,
+        finish_quantity: 34,
+        corrent_rate: '2%',
+        unique: 'unique_4'
+    },
+    {
+        title: '逻辑判断',
+        total_quantity: 981,
+        finish_quantity: 20,
+        corrent_rate: '4%',
+        unique: 'unique_5'
+    },
+    {
+        title: '定义判断',
+        total_quantity: 1981,
+        finish_quantity: 220,
+        corrent_rate: '14%',
+        unique: 'unique_6'
+    },
+]
+
 export {
-    itemInfo
+    itemInfo,
+    examItemInfo
 }

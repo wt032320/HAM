@@ -1,5 +1,10 @@
 <!--pages/exercise/exercise.wxml-->
 
 <view class="exercise-wrapper">
-    <CategoryItem></CategoryItem>
+    <CategoryItem
+        wx:for="{{examItemInfo}}"
+        wx:key="unique"
+        examItemInfo="{{item}}"
+    >
+    </CategoryItem>
 </view>

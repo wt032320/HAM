@@ -3,16 +3,16 @@
 <view class="category-wrapper">
     <view class="left-wrap">
         <view class="title">
-            数学运算
+            {{examItemInfo.title}}
         </view>
         <view class="statistics">
-            <view class="left">
-                <iconfont name="shuliangtongji" class="icon"/>
-                <view class="content">题量 10/1231</view>
+            <iconfont name="zhishishuliang" class="icon"/>
+            <view class="content content-l">
+                题量 {{examItemInfo.finish_quantity}}/{{examItemInfo.total_quantity}}
             </view>
-            <view class="right">
-                <iconfont name="zhengqueshuai" class="icon"/>
-                <view class="content">正确率 10%</view>
+            <iconfont name="zhengqueshuai" class="icon"/>
+            <view class="content content-r">
+                正确率 {{examItemInfo.corrent_rate}}
             </view>
         </view>
     </view>
