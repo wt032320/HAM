@@ -1,2 +1,25 @@
 <!--components/TopicItem/TopicItem.wxml-->
-
+<view>
+    <view class="title-bar">
+        <text class="topic-number">第{{topicData[0].number}}题</text>
+        <text class="topic-number">{{topicData[0].number}}/10
+        </text>
+    </view>
+    <view>
+        <view class="common">
+            <text class="type">【{{topicData[0].type}}】</text>{{topicData[0].question}}
+        </view>
+        <view class="common">
+            <text class="type-option">A</text> {{topicData[0].optionA}}
+        </view>
+        <view class="common">
+            <text class="type-option">B</text> {{topicData[0].optionB}}
+        </view>
+        <view class="common">
+            <text class="type-option">C</text> {{topicData[0].optionC}}
+        </view>
+        <view class="common">
+            <text class="type-option">D</text> {{topicData[0].optionD}}
+        </view>
+    </view>
+</view>

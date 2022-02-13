@@ -8,7 +8,8 @@
         "pages/forum/forum",
         "pages/manage/manage",
         "pages/gather/gather",
-        "pages/collect/collect"
+        "pages/collect/collect",
+        "pages/topic/topic"
     ],
     "window": {
         "backgroundTextStyle": "light",

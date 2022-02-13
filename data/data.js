@@ -113,7 +113,21 @@ const examItemInfo = [
     },
 ]
 
+const topicData = [
+    {
+        number: 1,
+        type: '单选题',
+        question: '我国现行法律体系中专门针对无线电管理的最高法律文件及其立法机关是:',
+        optionA: '中华人民共和国无线电管理条例，国务院和中央军委',
+        optionB: '中华人民共和国无线电管理办法，工业和信息化部',
+        optionC: '中华人民共和国电信条例，国务院',
+        optionD: '中华人民共和国业余无线电台管理办法，工业和信息化部',
+        correct_option: 'A'
+    },
+]
+
 export {
     itemInfo,
-    examItemInfo
+    examItemInfo,
+    topicData
 }

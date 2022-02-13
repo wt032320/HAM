@@ -17,6 +17,10 @@
         </view>
     </view>
     <view class="right-wrap">
-        <button class="button" size="mini">练习</button>
+        <button
+            class="button"
+            size="mini"
+            bindtap="bindViewTap"
+        >练习</button>
     </view>
 </view>
