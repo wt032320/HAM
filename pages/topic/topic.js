@@ -1,19 +1,27 @@
 // pages/topic/topic.js
 import { topicData } from '../../data/data'
 Page({
-
     /**
      * 页面的初始数据
      */
     data: {
         isChecked: false,
-        topicData
+        topicData,
+        currentTab: 0,
+        autoplay: false,
+        duduration: 500,
+        interval: 2000
     },
 
     bindSelection(e) {
         this.setData({
             isChecked: !this.data.isChecked
         })
+    },
+    bindChange(e) {
+        if(e.detail.source == 'touch') {
+            this.setData({ currentTab: e.detail.current })
+        }
     },
     /**
      * 生命周期函数--监听页面加载

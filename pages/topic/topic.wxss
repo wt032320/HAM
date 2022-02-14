@@ -1,18 +1,20 @@
 /* pages/topic/topic.wxss */
 .top-bar {
     display: flex;
-    position: absolute;
+    position: fixed;
+    width: 100vw;
+    height: 100rpx;
     top: 0;
     left: 0;
     right: 0;
     bottom: 100rpx;
-    z-index: 100;
+    z-index: 1;
+    opacity: 1;
 }
 
 .left-model,
 .right-model {
     width: 50vw;
-    height: 100rpx;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,4 +33,8 @@
 .main-continer {
     width: 692rpx;
     margin: 100rpx 32rpx 0 32rpx;
+}
+
+.swiper-wrap {
+    min-height: 90vh;
 }
