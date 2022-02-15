@@ -1,11 +1,16 @@
 // pages/exam/exam.js
+import { topicData } from '../../data/data'
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        topicData,
+        vertical: false,
+        autoplay: false,
+        interval: 2000,
+        duration: 500
     },
 
     /**
@@ -64,3 +69,7 @@ Page({
 
     }
 })
+
+// pages/swiper/swiper.js
+
+

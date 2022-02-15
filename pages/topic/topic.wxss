@@ -31,10 +31,7 @@
 }
 
 .main-continer {
-    width: 692rpx;
-    margin: 100rpx 32rpx 0 32rpx;
-}
-
-.swiper-wrap {
+    width: 100vw;
     min-height: 90vh;
+    margin-top: 100rpx;
 }

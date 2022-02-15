@@ -8,9 +8,8 @@ Page({
         isChecked: false,
         topicData,
         currentTab: 0,
-        autoplay: false,
-        duduration: 500,
-        interval: 2000
+        duduration: 1000,
+        easing: 'linear'
     },
 
     bindSelection(e) {

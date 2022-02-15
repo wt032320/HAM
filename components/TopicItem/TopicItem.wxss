@@ -1,4 +1,7 @@
 /* components/TopicItem/TopicItem.wxss */
+.item-wrap {
+    margin: 0 32rpx 0 32rpx;
+}
 .title-bar {
     display: flex;
     justify-content: space-between;

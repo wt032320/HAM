@@ -1,5 +1,5 @@
 <!--components/TopicItem/TopicItem.wxml-->
-<view>
+<view class="item-wrap">
     <view class="title-bar">
         <text class="topic-number">第{{topicData.number}}题</text>
         <text class="topic-number">{{topicData.number}}/10

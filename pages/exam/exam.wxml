@@ -1,2 +1,10 @@
 <!--pages/exam/exam.wxml-->
-<text>pages/exam/exam.wxml</text>
+<swiper
+    class="swiper-wrap"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{topicData}}" wx:key="*this">
+        <swiper-item>
+            <TopicItem topicData="{{item}}"></TopicItem>
+        </swiper-item>
+    </block>
+</swiper>

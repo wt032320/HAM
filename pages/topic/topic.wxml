@@ -9,19 +9,17 @@
         bindtap="bindSelection"
     >背题模式</view>
 </view>
-<view class="main-continer">
-    <swiper
-        class="swiper-wrap"
-        current="{{currentTab}}"
-        bindchange="bindChange"
-        autoplay="{{autoplay}}"
-        duration="{{duration}}"
-        interval="{{interval}}"
-    >
-        <block wx:for="{{topicData}}" wx:key="index">
-            <swiper-item>
-                <TopicItem topicData="{{item}}"></TopicItem>
-            </swiper-item>
-        </block>
-    </swiper>
-</view>
+<swiper
+    class="main-continer"
+    current="{{currentTab}}"
+    bindchange="bindChange"
+    duration="{{duration}}"
+    easing-function="{{easing}}"
+>
+    <block wx:for="{{topicData}}" wx:key="index">
+        <swiper-item>
+            <TopicItem topicData="{{item}}"></TopicItem>
+        </swiper-item>
+    </block>
+</swiper>
+
