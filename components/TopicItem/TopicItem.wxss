@@ -32,3 +32,11 @@
     border: 1rpx solid gray;
     border-radius: 50%;
 }
+
+.true {
+    border-color: green;
+}
+
+.false {
+    border-color: red;
+}

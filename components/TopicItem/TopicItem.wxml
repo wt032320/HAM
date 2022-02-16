@@ -9,17 +9,15 @@
         <view class="common">
             <text class="type">【{{topicData.type}}】</text>{{topicData.question}}
         </view>
-        <view class="common">
-            <text class="type-option">A</text> {{topicData.optionA}}
-        </view>
-        <view class="common">
-            <text class="type-option">B</text> {{topicData.optionB}}
-        </view>
-        <view class="common">
-            <text class="type-option">C</text> {{topicData.optionC}}
-        </view>
-        <view class="common">
-            <text class="type-option">D</text> {{topicData.optionD}}
+        <view
+            class="common"
+            bindtap="bindOptionTap"
+            wx:for="{{topicData.options}}"
+            wx:key="unique"
+            data-current_option="{{item}}"
+            data-correct_option="{{topicData.correct_option}}"
+        >
+            <text class="type-option {{isTrue&&item.checked?'true':''}}">{{item.select}}</text> {{item.content}}
         </view>
     </view>
 </view>
