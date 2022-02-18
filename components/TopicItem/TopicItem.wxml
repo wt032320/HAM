@@ -6,18 +6,39 @@
         </text>
     </view>
     <view>
-        <view class="common">
+        <view class="questionTitle">
             <text class="type">【{{topicData.type}}】</text>{{topicData.question}}
         </view>
-        <view
-            class="common"
-            bindtap="bindOptionTap"
-            wx:for="{{topicData.options}}"
-            wx:key="unique"
-            data-current_option="{{item}}"
-            data-correct_option="{{topicData.correct_option}}"
-        >
-            <text class="type-option {{isTrue&&item.checked?'true':''}}">{{item.select}}</text> {{item.content}}
+        <view>
+            <view
+                
+                class="noChose {{isTrueA}}"
+                bindtap="{{ handleTap }}"
+                data-choseitem="A"
+            >
+                A. {{topicData.options[0].content}}
+            </view>
+            <view
+                class="noChose {{isTrueB}}"
+                bindtap="{{ handleTap }}"
+                data-choseitem="B"
+            >
+                B. {{topicData.options[1].content}}
+            </view>
+            <view
+                class="noChose {{isTrueC}}"
+                bindtap="{{ handleTap }}"
+                data-choseitem="C"
+            >
+                C. {{topicData.options[0].content}}
+            </view>
+            <view
+                class="noChose {{isTrueD}}"
+                bindtap="{{ handleTap }}"
+                data-choseitem="D"
+            >
+                D. {{topicData.options[0].content}}
+            </view>
         </view>
     </view>
 </view>
