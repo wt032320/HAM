@@ -132,7 +132,8 @@ const topicData = [
             content: '中华人民共和国业余无线电台管理办法，工业和信息化部',
             select: "D",
         }],
-        correct_option: 'A'
+        correct_option: 'A',
+        
     },
     {
         number: 2,

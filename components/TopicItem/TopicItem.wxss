@@ -42,8 +42,8 @@
   
   .trueChose {
     background-color: #ffffff;
-    color: #21a021;
-    border: 1rpx #21a021 solid;
+    color: #3399CC;
+    border: 1rpx #3399CC solid;
     line-height: 68rpx;
     font-size: 30rpx;
     margin: 20rpx 20rpx 20rpx 20rpx;
@@ -60,4 +60,14 @@
     margin: 20rpx 20rpx 20rpx 20rpx;
     padding-left: 20rpx;
     border-radius: 5rpx;
+  }
+
+  .result-wrap {
+      overflow: hidden;
+      margin: 0 20rpx 0 20rpx;
+  }
+  .result {
+      font-size: 30rpx;
+      border-top: 1rpx #3399CC solid;
+      padding-top: 40rpx;
   }
