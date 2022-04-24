@@ -1,10 +1,12 @@
 // app.js
+import { Event } from './utils/event'
+
 App({
   onLaunch() {
-    // 展示本地存储能力
-    const logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
+    let event = new Event()
+    wx.$emit = event.emit
+    wx.$on = event.on
+    wx.$off = event.off
 
     // 登录
     wx.login({

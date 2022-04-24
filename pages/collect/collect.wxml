@@ -1,2 +1,10 @@
-<!--pages/collect/collect.wxml-->
-<text>pages/collect/collect.wxml</text>
+<view class="topic-wrap">
+    <view class="card-wrap" wx:if="{{hasData}}">
+        <block wx:for="{{topicList}}" wx:key="unique">
+            <TopicCard  itemInfo="{{item}}"></TopicCard>
+        </block>
+    </view>
+    <view wx:else class="no-data">
+        <van-empty image="error" description="No Data!" />
+    </view>
+</view>

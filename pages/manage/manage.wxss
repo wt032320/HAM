@@ -1,1 +1,54 @@
 /* pages/manage/manage.wxss */
+.manage-wrap {
+    width: 100vw;
+    height: 100vh;
+    border: 1rpx solid #fff;
+    background-color: #eee;
+}
+
+.content {
+    width: 94%;
+    height: 94%;
+    margin-left: 3vw;
+    margin-top: 2.5vh;
+    background-color: #fff;
+    border-radius: 15rpx;
+}
+
+.content-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 90rpx;
+    margin-left: 5vw;
+
+}
+
+.userinfo-wrap {
+    width: 94%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 90rpx;
+    font-size: 30rpx;
+}
+  
+.info-content {
+    display: inline-block;
+    overflow: hidden;
+    width: 50vw;
+    white-space: nowrap;
+    text-align: right;
+    text-overflow: ellipsis;
+    color: #aaaaaa;
+}
+  
+.special {
+    border-top: 1rpx solid #eeeeee;
+    border-bottom: 1rpx solid #eeeeee;
+}
+  
+.icon {
+    margin-right: 4rpx;
+}

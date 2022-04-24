@@ -4,9 +4,8 @@ const formatTime = date => {
   const day = date.getDate()
   const hour = date.getHours()
   const minute = date.getMinutes()
-  const second = date.getSeconds()
 
-  return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute, second].map(formatNumber).join(':')}`
+  return `${[year, month, day].map(formatNumber).join('/')} ${[hour, minute].map(formatNumber).join(':')}`
 }
 
 const formatNumber = n => {
@@ -14,6 +13,30 @@ const formatNumber = n => {
   return n[1] ? n : `0${n}`
 }
 
+const getCorrectNumber = (arr) => {
+  let nums = 0
+  arr.forEach((item) => {
+    if (item.currentOption === item.correctOption) {
+      nums++
+    }
+  })
+
+  return nums
+}
+
+const getUnfinishedNumber = (arr) => {
+  let nums = 0
+  arr.forEach((item) => {
+    if (item.currentOption === '') {
+      nums++
+    }
+  })
+
+  return nums
+}
+
 module.exports = {
-  formatTime
+  formatTime,
+  getCorrectNumber,
+  getUnfinishedNumber
 }

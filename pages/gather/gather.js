@@ -1,3 +1,5 @@
+import { getWrongList } from "../../api/user"
+
 // pages/gather/gather.js
 Page({
 
@@ -5,7 +7,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        topicList: [],
+        hasData: true
     },
 
     /**
@@ -26,7 +29,29 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        wx.showLoading({
+          title: '加载中～',
+          mask: true,
+        })
+        const userId = wx.getStorageSync('CACHE_USERID')
+        getWrongList(userId).then((res) => {
+            if (res.result.code === 404) {
+                this.setData({
+                    hasData: false
+                })
+            } else if (res.result.code === 200) {
+                let lists = res.result.topicLists
+                lists.map((item, index) => {
+                    item.index = index + 1
+                })
+                this.setData({
+                    topicList: lists
+                })
+            }
+            wx.hideLoading({
+                success: (res) => {},
+            })
+        })
     },
 
     /**

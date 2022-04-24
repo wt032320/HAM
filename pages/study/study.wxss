@@ -1,1 +1,31 @@
 /* pages/study/study.wxss */
+.study-wrap {
+    width: 100vw;
+    min-height: 100vh;
+    border: 1rpx solid #fff;
+    background-color: #eeeeee;
+}
+
+.search-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 10vh;
+    z-index: 10;
+}
+
+.scroll {
+    height: 90vh;
+}
+.main-wrap {
+    margin-top: 8vh;
+}
+
+.create-wrap {
+    position: fixed;
+    bottom: 60rpx;
+    right: 60rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}

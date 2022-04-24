@@ -1,0 +1,32 @@
+/* pages/articleDetail/articleDetail.wxss */
+.article-wrap {
+    overflow: hidden;
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #eee;
+}
+.article-wrap  .page-section {
+    box-sizing: border-box;
+    width: 94vw;
+    margin: 2vh 3vw;
+    border-radius: 15rpx;
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.title-wrap {
+    font-size: 45rpx;
+    font-weight: bold;
+    color: #000;
+}
+
+.info-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 20rpx 0;
+}
+
+.text {
+    margin: 0 20rpx;
+    color: #3399CC;
+}

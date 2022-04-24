@@ -1,48 +1,116 @@
-// index.js
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+
+import { authLogin } from "../../utils/authLogin.js"
 // 获取应用实例
 const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    show: false,
+    isLogin: false,
+    isEmail: false,
+    isPhone: false,
+    isSign: false,
+    email: '',
+    phone: '',
+    sign: '',
   },
-  // 事件处理函数
-  bindViewTap() {
-    wx.navigateTo({
-      url: '../home/home'
-    })
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
   },
+
   onLoad() {
-    if (wx.getUserProfile) {
+    
+  },
+
+  onShow() {
+    if (wx.getStorageSync('CACHE_TOKEN')) {
+      const userInfo = JSON.parse(wx.getStorageSync('CACHE_USERINFO'))
+      if (userInfo.email) {
+        this.setData({
+          isEmail: true,
+          email: userInfo.email
+        })
+      }
+      if (userInfo.phone) {
+        this.setData({
+          isPhone: true,
+          phone: userInfo.phone
+        })
+      }
+      if (userInfo.sign) {
+        this.setData({
+          isSign: true,
+          sign: userInfo.sign
+        })
+      }
+
       this.setData({
-        canIUseGetUserProfile: true
+        isLogin: true
       })
     }
   },
-  getUserProfile(e) {
-    // 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认，开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+
+  userLogin() {
     wx.getUserProfile({
-      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      lang: 'zh_CN',
+      desc: "微信授权登录",
       success: (res) => {
-        console.log(res)
+        authLogin(res.userInfo.nickName)
+        const userInfo = JSON.stringify(wx.getStorageSync('CACHE_USERINFO'))
+        if (userInfo.email) {
+          this.setData({
+            isEmail: true,
+            email: userInfo.email
+          })
+        }
+        if (userInfo.phone) {
+          this.setData({
+            isPhone: true,
+            phone: userInfo.phone
+          })
+        }
+        if (userInfo.sign) {
+          this.setData({
+            isSign: true,
+            sign: userInfo.sign
+          })
+        }
         this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
+          isLogin: true
         })
       }
     })
   },
-  getUserInfo(e) {
-    // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    console.log(e)
+
+  dialog() {
     this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+      show: true
     })
+  },
+
+  logOut() {
+    this.setData({ isLogin: false })
+    try {
+      wx.clearStorageSync()
+      Toast({
+        type: 'success',
+        message: '已退出登录～',
+        duration: 800,
+      })
+      
+    } catch(e) {
+      if (e) {
+        Toast({
+          type: 'fail',
+          message: '退出登录失败',
+          duration: 800,
+        })
+      }
+    }
+  },
+
+  onClose() {
+    this.setData({ show: false });
   }
 })

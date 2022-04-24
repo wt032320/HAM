@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "TopicItem": "/components/TopicItem/TopicItem"
+    "ExamItem": "/components/ExamItem/ExamItem"
   }
 }

@@ -1,0 +1,45 @@
+/* components/DetailCard/DetailCard.wxss */
+.card-item {
+    padding: 0 25rpx;
+    border-radius: 15rpx;
+    border-bottom: 1rpx solid #eee;
+    background-color: #ffffff;
+}
+
+.type-wrap {
+    padding: 15rpx 0;
+    color: #3399CC;
+}
+
+.question-wrap {
+    margin-bottom: 15rpx;
+    font-size: 34rpx;
+    color: #000000;
+}
+
+.option-wrap {
+    margin-bottom: 30rpx;
+    color: #363637;
+}
+
+.result-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20rpx;
+}
+
+.correct {
+    color: #3399CC;
+}
+
+.true {
+    color: rgb(19, 146, 19);
+}
+
+.false {
+    color: red;
+}
+
+.warning {
+    color: orange;
+}

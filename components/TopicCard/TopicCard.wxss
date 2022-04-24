@@ -1,0 +1,21 @@
+/* components/TopoicCard/TopicCard.wxss */
+.one-card {
+    margin-bottom: 10rpx;
+}
+
+.custom {
+    height: 50rpx;
+    overflow: hidden;
+}
+
+.topic-title {
+    margin-bottom: 4rpx;
+    font-size: 32rpx;
+    color: #444444;
+}
+
+.answer {
+    margin-top: 4rpx;
+    font-size: 32rpx;
+    color: #3399CC;
+}

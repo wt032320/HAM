@@ -5,7 +5,7 @@ const itemInfo = [
             {
                 icon: 'ceshi',
                 content: '每日一测',
-                router: '/pages/exercise/exercise',
+                router: '/pages/topic/topic',
                 unique: 'sa'
             },
             {
@@ -26,12 +26,6 @@ const itemInfo = [
                 router: '/pages/study/study',
                 unique: 'sa'
             },
-            {
-                icon: 'luntanzhongxin',
-                content: '论坛中心',
-                router: '/pages/forum/forum',
-                unique: 'sb'
-            }
         ],
         unique: 'ab'
     },
@@ -55,7 +49,13 @@ const itemInfo = [
                 content: '试题收藏',
                 router: '/pages/collect/collect',
                 unique: 'sc'
-            }
+            },
+            {
+                icon: 'kaoshijilu',
+                content: '考试记录',
+                router: '/pages/record/record',
+                unique: 'sd'
+            },
         ],
         unique: 'ac'
     }
@@ -318,10 +318,155 @@ const topicData = [
         }],
         correct_option: 'C'
     },
+    {
+        number: 11,
+        type: '单选题',
+        question: '业余电台的法定用途为：',
+        options: [{ 
+            
+            content: '供业余无线电爱好者进行自我训练、相互通信和技术研究',
+            select: "A",
+        },{
+            
+            content: '供公民在业余时间进行与个人生活事务有关的通信',
+            select: "B",
+        },{ 
+            content: '供公民在业余时间进行休闲娱乐',
+            select: "C",
+        },{ 
+            content: '供私家车主或者相应组织作为行车安全保障和途中消遣工具',
+            select: "D",
+        }],
+        correct_option: 'C'
+    },
+    {
+        number: 12,
+        type: '单选题',
+        question: '业余电台的法定用途为：',
+        options: [{ 
+            
+            content: '供业余无线电爱好者进行自我训练、相互通信和技术研究',
+            select: "A",
+        },{
+            
+            content: '供公民在业余时间进行与个人生活事务有关的通信',
+            select: "B",
+        },{ 
+            content: '供公民在业余时间进行休闲娱乐',
+            select: "C",
+        },{ 
+            content: '供私家车主或者相应组织作为行车安全保障和途中消遣工具',
+            select: "D",
+        }],
+        correct_option: 'C'
+    },
+    {
+        number: 13,
+        type: '单选题',
+        question: '业余电台的法定用途为：',
+        options: [{ 
+            
+            content: '供业余无线电爱好者进行自我训练、相互通信和技术研究',
+            select: "A",
+        },{
+            
+            content: '供公民在业余时间进行与个人生活事务有关的通信',
+            select: "B",
+        },{ 
+            content: '供公民在业余时间进行休闲娱乐',
+            select: "C",
+        },{ 
+            content: '供私家车主或者相应组织作为行车安全保障和途中消遣工具',
+            select: "D",
+        }],
+        correct_option: 'C'
+    },
+]
+
+const recordInfo = [
+    {
+        title: '模拟考试一',
+        correctNumber: 12,
+        unfinishedNumber: 11,
+        wrongNumber: 7,
+        totalNumber: 30,
+        status: false,
+        startedAt: '2022/04/21 12:30',
+        createAt: '2022/04/21 14:00'
+    },
+    {
+        title: '模拟考试二',
+        correctNumber: 21,
+        unfinishedNumber: 0,
+        wrongNumber: 9,
+        totalNumber: 30,
+        status: true,
+        startedAt: '2022/04/21 14:30',
+        createAt: '2022/04/21 15:00'
+    }
+]
+
+const studyInfo = [
+    {
+        _id: '1',
+        author: '小嘴抹了蜜',
+        category: '技能分享',
+        time: '2022/04/12 12:30:22',
+        title: 'javascript debugger 原理揭秘',
+        pictureUrl: '../../images/image/info.png',
+        paragraph: '文字是人类用符号记录表达信息以传之久远的方式和工具。 现代文字大多是记录语言的工具。 人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。'
+    },
+    {
+        _id: '2',
+        author: '唐家四少z',
+        category: '技能分享',
+        time: '2022/04/12 12:30:22',
+        title: 'javascript es6语法',
+        pictureUrl: 'http://tmp/7gawsQwBuPo95960a189dd3fb52ae636a71a242dc7b6.jpg',
+        paragraph: '接到手书，知道你要到我的故乡去，叫我给你一点什么指导。老实说，我的故乡，真正觉得可怀恋的地方并不是那里；但是因为在那里生长，住过十多年，究竟知道一点情形，所以写这一封信告诉你。'
+    },
+    {
+        _id: '3',
+        author: '小嘴抹了蜜',
+        category: '技能分享',
+        time: '2022/04/12 12:30:22',
+        title: 'javascript debugger 原理揭秘',
+        pictureUrl: '../../images/image/login.png',
+        paragraph: '文字是人类用符号记录表达信息以传之久远的方式和工具。 现代文字大多是记录语言的工具。 人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。'
+    },
+    {
+        _id: '4',
+        author: '京城十三少',
+        category: '技能分享',
+        time: '2022/04/12 12:30:22',
+        title: '钢铁是怎样练成的，文字是人类用符号记录表达信息以传之久远的方式和工具',
+        pictureUrl: '',
+        paragraph: '我所要告诉你的，并不是那里的风土人情，那是写不尽的，但是你到那里一看也就会明白的，不必啰唆地多讲。我要说的是一种很有趣的东西，这便是船。你在家乡平常总坐人力车、电车或是汽车，但在我的故乡那里这些都没有，除了在城内或山上是用轿子以外，普通代步都是用船。'
+    },
+    {
+        _id: '5',
+        author: '我不知道gaa',
+        category: '大神分享',
+        time: '2022/04/12 12:30:22',
+        title: 'jdk18的开发思路',
+        pictureUrl: '',
+        paragraph: '你如坐船出去，可是不能像坐电车的那样性急，立刻盼望走到。倘若出城，走三四十里路（我们那里的里程是很短，一里才及英里三分之一），来回总要预备一天。你坐在船上，应该是游山的态度，看看四周物色，随处可见的山，岸旁的乌桕，河边的红寥和白苹、渔舍，各式各样的桥，困倦的时候睡在舱中拿出随笔来看，或者冲一碗清茶喝喝。'
+    },
+    {
+        _id: '6',
+        author: '月花满天z',
+        category: '技能分享',
+        time: '2022/04/12 12:30:22',
+        title: '你如坐船出去，可是不能像坐电车的那样性急，立刻盼望走到。',
+        pictureUrl: '',
+        paragraph: '文字是人类用符号记录表达信息以传之久远的方式和工具。 现代文字大多是记录语言的工具。 人类往往先有口头的语言后产生书面文字，很多小语种，有语言但没有文字。'
+    },
 ]
 
 export {
     itemInfo,
     examItemInfo,
-    topicData
+    topicData,
+    recordInfo,
+    studyInfo
 }

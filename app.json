@@ -2,14 +2,17 @@
     "pages": [
         "pages/home/home",
         "pages/index/index",
-        "pages/exercise/exercise",
+        "pages/login/login",
         "pages/exam/exam",
         "pages/study/study",
-        "pages/forum/forum",
+        "pages/record/record",
         "pages/manage/manage",
         "pages/gather/gather",
         "pages/collect/collect",
-        "pages/topic/topic"
+        "pages/topic/topic",
+        "pages/details/details",
+        "pages/newblog/newblog",
+        "pages/articleDetail/articleDetail"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -19,20 +22,45 @@
         "backgroundColor": "#dddddd"
     },
     "tabBar": {
+        "selectedColor": "#3399CC",
+        "color": "#000000",
         "list": [
             {
                 "pagePath": "pages/home/home",
+                "iconPath": "assets/home.png",
+                "selectedIconPath": "assets/home-true.png",
                 "text": "首页"
             },
             {
                 "pagePath": "pages/index/index",
+                "iconPath": "assets/mine.png",
+                "selectedIconPath": "assets/mine_1.png",
                 "text": "我的"
             }
         ]
     },
-    "style": "v2",
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
-        "iconfont": "/images/iconfont/iconfont"
+        "iconfont": "/images/iconfont/iconfont",
+        "van-button": "/miniprogram_npm/@vant/weapp/button/index",
+        "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
+        "van-field": "/miniprogram_npm/@vant/weapp/field/index",
+        "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
+        "van-toast": "/miniprogram_npm/@vant/weapp/toast/index",
+        "van-cell": "/miniprogram_npm/@vant/weapp/cell/index",
+        "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index",
+        "van-collapse": "/miniprogram_npm/@vant/weapp/collapse/index",
+        "van-collapse-item": "/miniprogram_npm/@vant/weapp/collapse-item/index",
+        "van-empty": "/miniprogram_npm/@vant/weapp/empty/index",
+        "van-count-down": "/miniprogram_npm/@vant/weapp/count-down/index",
+        "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+        "van-checkbox": "/miniprogram_npm/@vant/weapp/checkbox/index",
+        "van-grid": "/miniprogram_npm/@vant/weapp/grid/index",
+        "van-grid-item": "/miniprogram_npm/@vant/weapp/grid-item/index",
+        "van-tag": "/miniprogram_npm/@vant/weapp/tag/index",
+        "van-search": "/miniprogram_npm/@vant/weapp/search/index",
+        "van-dropdown-menu": "/miniprogram_npm/@vant/weapp/dropdown-menu/index",
+        "van-dropdown-item": "/miniprogram_npm/@vant/weapp/dropdown-item/index",
+        "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
     }
 }

@@ -1,0 +1,23 @@
+/* pages/forum/forum.wxss */
+.record-wrap {
+    width: 100vw;
+    min-height: 100vh;
+    border: 1rpx solid #fff;
+    background-color: #eeeeee;
+}
+
+.card-wrap {
+    width: 94%;
+    margin-left: 3vw;
+    margin-top: 2.5vh;
+    border-radius: 15rpx;
+}
+
+.no-data {
+    width: 94%;
+    height: 95vh;
+    margin-left: 3vw;
+    margin-top: 2.5vh;
+    background-color: #fff;
+    border-radius: 15rpx;
+}

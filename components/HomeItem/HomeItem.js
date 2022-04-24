@@ -20,10 +20,23 @@ Component({
     methods: {
         bindViewTap(e) {
             const router = e.currentTarget.dataset.router
-            console.log(router)
-            wx.navigateTo({
-              url: router,
-            })
+            if (router === '/pages/study/study') {
+                wx.navigateTo({
+                    url: router,
+                })
+            } else {
+                const token = wx.getStorageSync('CACHE_TOKEN')
+                if (token) {
+                    wx.navigateTo({
+                        url: router,
+                    })
+                } else {
+                    wx.setStorageSync('router', router)
+                    wx.navigateTo({
+                        url: '/pages/login/login',
+                    })
+                }
+            }
         },
     },
 

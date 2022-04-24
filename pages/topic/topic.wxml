@@ -1,25 +1,58 @@
 <!--pages/topic/topic.wxml-->
 <view class="top-bar">
-    <view
-        class="left-model {{!isChecked?'is-checked':'normal'}}"
-        bindtap="bindSelection"
-    >答题模式</view>
-    <view
-        class="right-model {{isChecked?'is-checked':'normal'}}"
-        bindtap="bindSelection"
-    >背题模式</view>
+    <view class="left-model normal">
+        <van-button
+            plain 
+            size="small"
+            disabled="{{isDisabledOn}}"
+            color="#3399CC"
+            bindtap="bindOnTap"
+        >上一题</van-button>
+    </view>
+    <view class="right-model normal">
+        <van-button
+            plain
+            disabled="{{isDisabledNext}}"
+            size="small"
+            color="#3399CC"
+            bindtap="bindNextTap"
+        >下一题</van-button>
+    </view>
 </view>
-<swiper
-    class="main-continer"
-    current="{{currentTab}}"
-    bindchange="bindChange"
-    duration="{{duration}}"
-    easing-function="{{easing}}"
->
-    <block wx:for="{{topicData}}" wx:key="index">
-        <swiper-item>
-            <TopicItem topicData="{{item}}"></TopicItem>
-        </swiper-item>
-    </block>
-</swiper>
+<scroll-view scroll-y="true"  style="height: 93vh">
+    <swiper
+        class="main-continer"
+        current="{{currentTab}}"
+        bindchange="bindChange"
+        duration="{{duration}}"
+        easing-function="{{easing}}"
+    >
+        <block wx:for="{{topicData}}" wx:key="index">
+            <swiper-item>
+                <TopicItem
+                    bindemitIdFun="emitIdFun"
+                    topicData="{{item}}"
+                >
+                </TopicItem>
+            </swiper-item>
+        </block>
+    </swiper>
+</scroll-view>
 
+<view class="bottom-bar">
+    <view
+        class="left-model bottom-left"
+        bindtap="colloectFun"
+    >
+        <iconfont name="{{fontName}}" class="icon"/>
+        <text class="{{fontName}}">收藏</text>
+    </view>
+    <view
+        class="right-model bottom-right"
+        bindtap="wrongTopicFun"
+    >
+        <iconfont name="{{fontClass}}" class="icon"/>
+        <text class="{{fontClass}}">错题</text>
+    </view>
+    <van-toast id="van-toast" />
+</view>

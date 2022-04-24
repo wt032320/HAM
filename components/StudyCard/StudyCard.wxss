@@ -1,0 +1,73 @@
+/* components/StudyCard/StudyCard.wxss */
+.card-wrap {
+    box-sizing: border-box;
+    width: 94vw;
+    margin: 0 0 30rpx 3vw;
+    padding: 20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+
+.top-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-wrap  .author {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #303133;
+}
+
+.time-wrap {
+    font-size: 30rpx;
+    color: #aaaaaa;
+}
+
+.top-wrap .category {
+    font-size: 32rpx;
+    color: #F29100;
+}
+
+.content-wrap {
+    display: flex;
+    margin-right: 20rpx;
+}
+
+.left-wrap .title {
+    line-height: 50rpx;
+    margin: 20rpx 0 0;
+    font-size: 30rpx;
+    font-weight: bold;
+    color: #303133;
+}
+
+.left-wrap .content {
+    line-height: 50rpx;
+    font-size: 28rpx;
+    color: #303133;
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: normal !important;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical
+}
+
+.right-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 208rpx;
+    height: 208rpx;
+    margin-top: 20rpx;
+    margin-left: 12rpx;
+}
+
+.right-wrap image {
+    width: 190rpx;
+    height: 190rpx;
+}
+

@@ -1,0 +1,22 @@
+<!--components/DetailCard/DetailCard.wxml-->
+<view class="card-item">
+    <view class="type-wrap">
+    【{{detailItem.type}}】
+    </view>
+    <view class="question-wrap">
+        {{detailItem.number}}. {{detailItem.question}}
+    </view>
+    <view class="option-wrap">
+        <view>A. {{detailItem.options[0].content}}</view>
+        <view>B. {{detailItem.options[1].content}}</view>
+        <view>C. {{detailItem.options[2].content}}</view>
+        <view>D. {{detailItem.options[3].content}}</view>
+    </view>
+    <view class="result-wrap">
+        <view wx:if="{{isFinished}}" class="current {{ isTrue ? 'true' : 'false' }}">
+            你的答案：{{detailItem.currentOption}}
+        </view>
+        <view wx:else class="warning">没有作答！</view>
+        <view class="correct">正确答案：{{detailItem.correctOption}}</view>
+    </view>
+</view>

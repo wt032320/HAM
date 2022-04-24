@@ -1,0 +1,27 @@
+<!--components/RecordCard/RecordCard.wxml-->
+<view class="card-item">
+    <view class="title-wrap">
+        <view class="title-content">
+            {{recordItem.title}}
+        </view>
+       <view class="tag-content">
+            <van-tag size="medium" type="success" wx:if="{{recordItem.status}}">已答完</van-tag>
+            <van-tag size="medium" type="danger" wx:else>未答完</van-tag>
+       </view>
+       <view class="right-wrap" bindtap="handleToDetail">
+            查看详情
+            <van-icon name="arrow" />
+        </view>
+    </view>
+    <view class="content-wrap">
+        <view class="left-wrap">
+            共{{recordItem.totalNumber}}道，答对{{recordItem.correctNumber}}道，答错{{recordItem.wrongNumber}}道，未答{{recordItem.unfinishedNumber}}道。
+        </view>
+    </view>
+    <view class="time-wrap">
+       <view>
+            <van-icon name="clock-o" />
+       </view>
+        <view class="time-content">{{recordItem.startedAt}} — {{recordItem.createdAt}}</view>
+    </view>
+</view>

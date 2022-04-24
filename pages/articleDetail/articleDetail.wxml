@@ -1,0 +1,15 @@
+<!--pages/articleDetail/articleDetail.wxml-->
+<view class="article-wrap">
+    <view class="page-section">
+        <view class="title-wrap">
+            {{title}}
+        </view>
+        <view class="info-wrap">
+            <view class="text">{{author}}</view>
+            <view class="text">{{time}}</view>
+        </view>
+        <view class="page-content">
+            <rich-text nodes="{{htmlSnip}}"></rich-text>
+        </view>
+    </view>
+</view>

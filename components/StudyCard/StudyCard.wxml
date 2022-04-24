@@ -1,0 +1,21 @@
+<!--components/StudyCard/StudyCard.wxml-->
+<view class="card-wrap" bindtap="handleToArticle">
+    <view class="top-wrap">
+        <view class="author">{{infoItem.author}}</view>
+        <view class="category">{{infoItem.category}}</view>
+    </view>
+    <view class="content-wrap">
+        <view class="left-wrap">
+            <view class="title">
+                {{infoItem.title}}
+            </view>
+            <view class="content">
+                {{infoItem.paragraph}}
+            </view>
+        </view>
+        <view class="right-wrap" wx:if="{{infoItem.pictureUrl !== ''}}">
+            <image  src="{{infoItem.pictureUrl}}"></image>
+        </view>
+    </view>
+    <view class="time-wrap">{{infoItem.createdAt}}</view>
+</view>

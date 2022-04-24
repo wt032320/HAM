@@ -1,0 +1,14 @@
+var set = {
+	setClass: function(array, index){
+        if (array.indexOf(index) !== -1) {
+            return 'chose'
+        } else {
+            return ''
+        }
+		
+	}
+}
+// 导出对外暴露的属性
+module.exports = {
+	setClass: set.setClass
+}

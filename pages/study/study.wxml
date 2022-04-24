@@ -1,2 +1,25 @@
 <!--pages/study/study.wxml-->
-<text>pages/study/study.wxml</text>
+<view class="study-wrap">
+    <view class="search-wrap">
+        <van-search
+            value="{{ value }}"
+            placeholder="请输入搜索关键词"
+            use-action-slot
+            bind:change="onChange"
+            bind:search="onSearch"
+        >
+            <view slot="action" bind:tap="onClick">搜索</view>
+        </van-search>
+    </view>
+    <view class="main-wrap">
+        <scroll-view scroll-y="true" class="scroll">
+            <block wx:for="{{studyInfo}}" wx:key="unqiue">
+                <StudyCard infoItem="{{item}}"></StudyCard>
+            </block> 
+        </scroll-view>
+    </view>
+    <view class="create-wrap" bindtap="handleToPage">
+        <van-icon name="add" color="#3399CC" size="100rpx"></van-icon>
+    </view>
+    <van-toast id="van-toast" />
+</view>

@@ -1,23 +1,68 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
+<!-- <van-button bind:click="auth">点击授权登录</van-button> -->
+
+<view class="userInfo">
+  <view class="info-top">
+    <view class='info-wrap'>
+      <view class="userAvatar">
+        <view wx:if="{{!isLogin}}"><image  class="image" src="/assets/头像-男三.png"></image></view>
+        <open-data type="userAvatarUrl" class="image" wx:else></open-data>
       </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+      <view class="nickName">
+        <view wx:if="{{!isLogin}}" bindtap="userLogin">立即登录</view>
+        <open-data type="userNickName" lang="zh_CN" wx:else></open-data>
+      </view>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="info-middle" wx:if="{{isLogin}}">
+    <view class="content">
+      <view class="content-info">
+        <iconfont name="youxiang" class="icon"/>
+        <view wx:if="{{!isEmail}}" class="userinfo-wrap">
+          <view>邮箱:</view>
+          <view class="info-content">快去设置你的邮箱吧～</view>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>邮箱:</view>
+          <view class="info-content">{{email}}</view>
+        </view>
+      </view>
+      <view class="content-info special">
+        <iconfont name="shoujihao" class="icon"/>
+        <view wx:if="{{!isPhone}}" class="userinfo-wrap">
+          <view>手机号:</view>
+          <view class="info-content">快去设置你的手机号吧～</view>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>手机号:</view>
+          <view class="info-content">{{phone}}</view>
+        </view>
+      </view>
+      <view class="content-info">
+        <iconfont name="gexingqianming" class="icon"/>
+        <view wx:if="{{!isSign}}" class="userinfo-wrap">
+          <view>个性签名:</view>
+          <view class="info-content">快去设置你的个性签名吧～</view>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>个性签名:</view>
+          <view class="info-content">{{sign}}</view>
+        </view>
+      </view>
+    </view>
   </view>
+  <view class="info-bottom" wx:if="{{isLogin}}">
+    <view class="log-out" bindtap="dialog">
+      退出登录
+    </view>
+  </view>
+  <van-dialog
+    use-slot
+    title="是否退出登录？"
+    show="{{ show }}"
+    show-cancel-button
+    bind:close="onClose"
+    bind:confirm="logOut"
+  >
+  </van-dialog>
+  <van-toast id="van-toast" />
 </view>

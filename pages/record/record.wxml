@@ -1,0 +1,11 @@
+<!--pages/forum/forum.wxml-->
+<view class="record-wrap">
+    <view class="card-wrap" wx:if="{{hasData}}">
+        <block wx:for="{{recordInfo}}" wx:key="index">
+            <RecordCard recordItem="{{item}}"></RecordCard>
+        </block>
+    </view>
+    <view wx:else class="no-data">
+        <van-empty image="error" description="No Data!" />
+    </view>
+</view>

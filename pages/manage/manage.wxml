@@ -1,2 +1,86 @@
 <!--pages/manage/manage.wxml-->
-<text>pages/manage/manage.wxml</text>
+<view class="manage-wrap">
+    <view class="content">
+      <view class="content-info" bindtap="dialog">
+        <iconfont name="youxiang" class="icon"/>
+        <view wx:if="{{!isEmail}}" class="userinfo-wrap">
+          <view>邮箱:</view>
+          <view class="info-content">快去设置你的邮箱吧～</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>邮箱:</view>
+          <view class="info-content">{{email}}</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+      </view>
+      <view class="content-info special" bindtap="dialog">
+        <iconfont name="shoujihao" class="icon"/>
+        <view wx:if="{{!isPhone}}" class="userinfo-wrap">
+          <view>手机号:</view>
+          <view class="info-content">快去设置你的手机号吧～</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>手机号:</view>
+          <view class="info-content">{{phone}}</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+      </view>
+      <view class="content-info" bindtap="dialog">
+        <iconfont name="gexingqianming" class="icon"/>
+        <view wx:if="{{!isSign}}" class="userinfo-wrap">
+          <view>个性签名:</view>
+          <view class="info-content">快去设置你的个性签名吧～</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>个性签名:</view>
+          <view class="info-content">{{sign}}</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+      </view>
+    </view>
+    <van-dialog
+        use-slot
+        title="信息表单"
+        show="{{ show }}"
+        show-cancel-button
+        bind:close="onClose"
+        bind:confirm="setUserInfo"
+    >
+    <van-cell-group>
+        <van-field
+            clearable
+            model:value="{{ newEmail }}"
+            type="text"
+            label="邮箱"
+            left-icon="chat-o"
+            placeholder="请输入邮箱～"
+        />
+
+        <van-field
+            clearable
+            model:value="{{ newPhone }}"
+            type="idCard"
+            left-icon="phone-o"
+            label="手机号"
+            placeholder="请输手机号～"
+        />
+
+        <van-field
+            autosize
+            clearable
+            model:value="{{ newSign }}"
+            type="textarea"
+            left-icon="edit"
+            maxlength="50"
+            show-word-limit="true"
+            label="个性签名"
+            placeholder="请输入签名～"
+            border="{{ false }}"
+        />
+        </van-cell-group>
+    </van-dialog>
+    <van-toast id="van-toast" />
+</view>

@@ -9,7 +9,7 @@
     right: 0;
     bottom: 100rpx;
     z-index: 1;
-    opacity: 1;
+    background: white;
 }
 
 .left-model,
@@ -34,4 +34,35 @@
     width: 100vw;
     min-height: 90vh;
     margin-top: 100rpx;
+}
+
+.bottom-bar {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: white;
+}
+
+.bottom-right {
+    border-top: 2rpx solid #eeeeee;
+}
+
+.bottom-left {
+    border-top: 2rpx solid #eeeeee;
+    border-right: 2rpx solid #eeeeee;
+}
+
+.cuotiji,
+.shoucang {
+    color: #000 !important;
+}
+
+.yicuotiji,
+.yishoucang {
+    color: #3399CC !important
 }

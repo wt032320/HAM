@@ -1,0 +1,9 @@
+<!--pages/details/details.wxml-->
+<view class="details-wrap">
+    <view class="content-wrap">
+        <block wx:for="{{detailsData}}" wx:key="index">
+            <DetailCard detailItem="{{item}}"></DetailCard>
+        </block>
+        
+    </view>
+</view>
