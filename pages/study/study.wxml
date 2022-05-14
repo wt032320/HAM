@@ -6,17 +6,19 @@
             placeholder="请输入搜索关键词"
             use-action-slot
             bind:change="onChange"
-            bind:search="onSearch"
         >
             <view slot="action" bind:tap="onClick">搜索</view>
         </van-search>
     </view>
     <view class="main-wrap">
-        <scroll-view scroll-y="true" class="scroll">
+        <scroll-view scroll-y="true" class="scroll" wx:if="{{hasData}}">
             <block wx:for="{{studyInfo}}" wx:key="unqiue">
                 <StudyCard infoItem="{{item}}"></StudyCard>
             </block> 
         </scroll-view>
+        <view wx:else class="no-data">
+            <van-empty image="error" description="No Data!" />
+        </view>
     </view>
     <view class="create-wrap" bindtap="handleToPage">
         <van-icon name="add" color="#3399CC" size="100rpx"></van-icon>

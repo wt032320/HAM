@@ -1,13 +1,13 @@
 import {
     HEADER,
     TOKENNAME,
-    HTTP_REQUEST_URL,
+    HTTPS_REQUEST_URL,
   } from '../data/config.js';
 
 export default function request(api, method, data, {
     noAuth = false,
     customHeader = null,
-    baseURL = "http://127.0.0.1:3002/" //
+    baseURL =  "http://127.0.0.1:3001/" //"https://qc4vl7.app.cloudendpoint.cn/" //
 }) {
     let header = customHeader || HEADER
     const token = wx.getStorageSync('CACHE_TOKEN')

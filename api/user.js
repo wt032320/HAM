@@ -8,6 +8,10 @@ export function login(data) {
   });
 }
 
+export function setTag(data) {
+  return request.post("user/tag", data)
+}
+
 //更新用户信息
 export function updateUserInfo(data) {
   return request.post("user/infos", data);

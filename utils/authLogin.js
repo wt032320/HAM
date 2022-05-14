@@ -15,6 +15,7 @@ export async function authLogin(data) {
   //调用 token 和 储存用户token等信息
 async function loginMain(code, username) {
     const loginRes = await login({ code, username })
+    console.log(loginRes)
     wx.setStorageSync('CACHE_USERID', loginRes.result.userId)
     wx.setStorageSync('CACHE_TOKEN', loginRes.result.token)
     wx.setStorageSync('TITLE_TAG', loginRes.result.titleTag)

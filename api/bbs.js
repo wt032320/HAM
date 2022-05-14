@@ -15,3 +15,9 @@ export function getArticleDetail(id) {
         noAuth: true
     })
 }
+
+export function searchArticle(data) {
+    return request.post("bbs/search", data, {
+        noAuth: true
+    })
+}

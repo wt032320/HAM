@@ -14,7 +14,7 @@
             </view>
         </view>
         <view class="right-wrap" wx:if="{{infoItem.pictureUrl !== ''}}">
-            <image  src="{{infoItem.pictureUrl}}"></image>
+            <image src="{{infoItem.pictureUrl}}"></image>
         </view>
     </view>
     <view class="time-wrap">{{infoItem.createdAt}}</view>

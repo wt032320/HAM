@@ -146,6 +146,9 @@ Page({
                 message: '仍有题目尚未完成，是否确认交卷？',
             })
             .then(() => {
+                wx.showLoading({
+                    title: '交卷中～',
+                })
                 const userId = wx.getStorageSync('CACHE_USERID')
                 const records = this.data.answerList
                 const startedAt = this.data.startedAt
@@ -160,6 +163,9 @@ Page({
                     startedAt
                 }).then((res) => {
                     if (res.status === 200) {
+                        wx.hideLoading({
+                            success: (res) => {},
+                        })
                         Toast.success({
                             message: '交卷成功!',
                             duration: 1000,
@@ -183,6 +189,9 @@ Page({
             message: '考试时间仍有剩余，是否提前交卷？',
         })
             .then(() => {
+                wx.showLoading({
+                    title: '交卷中～',
+                })
                 const userId = wx.getStorageSync('CACHE_USERID')
                 const records = this.data.answerList
                 const startedAt = this.data.startedAt
@@ -197,6 +206,9 @@ Page({
                     startedAt
                 }).then((res) => {
                     if (res.status === 200) {
+                        wx.hideLoading({
+                            success: (res) => {},
+                        })
                         Toast.success({
                             message: '交卷成功!',
                             duration: 1000,
@@ -218,6 +230,9 @@ Page({
     },
 
     finished() {
+        wx.showLoading({
+            title: '交卷中～',
+        })
         const userId = wx.getStorageSync('CACHE_USERID')
         const records = this.data.answerList
         const startedAt = this.data.startedAt
@@ -232,6 +247,9 @@ Page({
             startedAt
         }).then((res) => {
             if (res.status === 200) {
+                wx.hideLoading({
+                    success: (res) => {},
+                })
                 Toast.success({
                     message: '已自动交卷!',
                     duration: 1000,

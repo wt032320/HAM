@@ -1,7 +1,7 @@
 // pages/study/study.js
-import { getArticleList } from '../../api/bbs';
+import { getArticleList, searchArticle } from '../../api/bbs';
 import { authLogin } from "../../utils/authLogin.js"
-import { formatTime } from '../../utils/util';
+import { formatTime, throttle } from '../../utils/util';
 Page({
 
     /**
@@ -9,6 +9,7 @@ Page({
      */
     data: {
         value: '',
+        hasData: false,
         studyInfo: []
     },
 
@@ -16,14 +17,48 @@ Page({
         this.setData({
           value: e.detail,
         });
-    },
-
-    onSearch() {
-        console.log(this.data.value)
+        if (this.data.value === '') {
+            this.getArticleListFun()
+        }
     },
 
     onClick() {
-        console.log('ss')
+        this.setData({
+            studyInfo: []
+        })
+        wx.showLoading({
+          title: '搜索中~',
+          mask: true
+        })
+        const data = {
+            keyWords: this.data.value
+        }
+
+        throttle(searchArticle(data).then((res) => {
+            if (res.status === 200) {
+                const lists = res.result
+                lists.forEach((item) => {
+                    item.createdAt = formatTime(new Date(item.createdAt))
+                })
+
+                this.setData({
+                    studyInfo: lists,
+                    hasData: true
+                })
+
+                wx.hideLoading({
+                    success: (res) => {},
+                })
+            } else if (res.status === 404) {
+                this.setData({
+                    hasData: false
+                })
+
+                wx.hideLoading({
+                    success: (res) => {},
+                })
+            }
+        }), 5000)
     },
 
     handleToPage() {
@@ -45,6 +80,29 @@ Page({
             })
         }
     },
+
+    getArticleListFun() {
+        wx.showLoading({
+            title: '加载中～',
+            mask: true
+        })
+
+        getArticleList().then((res) => {
+            if (res.status === 200) {
+                const lists = res.result
+                lists.forEach((item) => {
+                    item.createdAt = formatTime(new Date(item.createdAt))
+                })
+                this.setData({
+                    studyInfo: lists,
+                    hasData: true
+                })
+                wx.hideLoading({
+                    success: (res) => {},
+                })
+            }
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -64,25 +122,7 @@ Page({
      */
     onShow: function () {
         if (this.data.studyInfo.length === 0) {
-            wx.showLoading({
-                title: '加载中～',
-                mask: true
-            })
-
-            getArticleList().then((res) => {
-                if (res.status === 200) {
-                    const lists = res.result
-                    lists.forEach((item) => {
-                        item.createdAt = formatTime(new Date(item.createdAt))
-                    })
-                    this.setData({
-                        studyInfo: lists
-                    })
-                    wx.hideLoading({
-                        success: (res) => {},
-                    })
-                }
-            })
+            this.getArticleListFun()
         }
     },
 

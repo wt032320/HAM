@@ -31,12 +31,21 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
+        wx.showLoading({
+            title: '加载中～',
+            mask: true,
+        })
+
         const userId = wx.getStorageSync('CACHE_USERID')
 
         getExamRecord(userId).then((res) => {
             if (res.status === 404) {
                 this.setData({
                     hasData: false
+                })
+
+                wx.hideLoading({
+                    success: (res) => {},
                 })
             } else if (res.status === 200) {
                 const lists = res.result
@@ -53,6 +62,10 @@ Page({
                 })
                 this.setData({
                     recordInfo: lists
+                })
+
+                wx.hideLoading({
+                    success: (res) => {},
                 })
             }
         })

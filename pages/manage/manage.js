@@ -29,9 +29,9 @@ Page({
     },
 
     setUserInfo () {
-        const globalData = getApp().globalData
+      const userInfo = JSON.parse(wx.getStorageSync('CACHE_USERINFO'))
         const submitData = {
-            id: globalData.userInfo.userId,
+            id: userInfo.userId,
             data: {
                 phone: this.data.newPhone,
                 email: this.data.newEmail,
@@ -39,16 +39,20 @@ Page({
             }
         }
        updateUserInfo(submitData).then((res) => {
+          console.log(res)
            if (res.result.Status === 200) {
-            getApp().globalData.userInfo.email = submitData.data.email
-            getApp().globalData.userInfo.phone = submitData.data.phone
-            getApp().globalData.userInfo.sign = submitData.data.sign
             Toast({
               type: 'success',
               message: '修改成功～',
               duration: 800,
             })
-           }
+            wx.setStorageSync('CACHE_USERINFO', JSON.stringify(res.result.userData))
+            this.setData({
+              email: this.data.newEmail,
+              phone: this.data.newPhone,
+              sign: this.data.newSign,
+            })
+          }
        })
         
     },
@@ -61,31 +65,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        if (wx.getStorageSync('CACHE_TOKEN')) {
-            const globalData = getApp().globalData.userInfo
-            const userInfo = globalData
-            if (userInfo.email) {
-              this.setData({
-                isEmail: true,
-                email: userInfo.email,
-                newEmail: userInfo.email
-              })
-            }
-            if (userInfo.phone) {
-              this.setData({
-                isPhone: true,
-                phone: userInfo.phone,
-                newPhone: userInfo.phone
-              })
-            }
-            if (userInfo.sign) {
-              this.setData({
-                isSign: true,
-                sign: userInfo.sign,
-                newSign: userInfo.sign
-              })
-            }
-          }
+        
     },
 
     /**
@@ -99,7 +79,30 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+      if (wx.getStorageSync('CACHE_TOKEN')) {
+        const userInfo = JSON.parse(wx.getStorageSync('CACHE_USERINFO'))
+        if (userInfo.email) {
+          this.setData({
+            isEmail: true,
+            email: userInfo.email,
+            newEmail: userInfo.email
+          })
+        }
+        if (userInfo.phone) {
+          this.setData({
+            isPhone: true,
+            phone: userInfo.phone,
+            newPhone: userInfo.phone
+          })
+        }
+        if (userInfo.sign) {
+          this.setData({
+            isSign: true,
+            sign: userInfo.sign,
+            newSign: userInfo.sign
+          })
+        }
+      }
     },
 
     /**

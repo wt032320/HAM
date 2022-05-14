@@ -35,8 +35,21 @@ const getUnfinishedNumber = (arr) => {
   return nums
 }
 
+function throttle(fn,wait){
+	var flag = true;
+	return function(){
+        if(!flag)return;
+        flag = false;
+		setTimeout(()=>{
+				fn.apply(this,arguments);
+				flag = true;
+		},wait)
+	}
+}
+
 module.exports = {
   formatTime,
   getCorrectNumber,
-  getUnfinishedNumber
+  getUnfinishedNumber,
+  throttle
 }

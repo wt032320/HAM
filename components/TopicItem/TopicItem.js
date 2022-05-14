@@ -1,3 +1,5 @@
+import { setTag } from "../../api/user"
+
 // components/TopicItem/TopicItem.js
 Component({
     /**
@@ -34,7 +36,11 @@ Component({
 
             this.triggerEvent('emitIdFun', topicId)
 
-            const tag = e.currentTarget.dataset.titletag + 1
+            const tag = e.currentTarget.dataset.titletag
+            const userId = wx.getStorageSync('CACHE_USERID')
+            setTag({ userId, tag }).then((res) => {
+                console.log(res)
+            })
             wx.setStorageSync('TITLE_TAG', tag)
             const choseItem = e.currentTarget.dataset.choseitem,
                 correct_option = this.properties.topicData.correctOption
