@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "RecordCard": "/components/RecordCard/RecordCard"
-  }
+  },
+   "navigationBarTitleText": "考试记录"
 }

@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "DetailCard": "/components/DetailCard/DetailCard"
-  }
+  },
+  "navigationBarTitleText": "考试详情"
 }

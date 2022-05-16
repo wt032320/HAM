@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "TopicCard": "/components/TopicCard/TopicCard"
-  }
+  },
+  "navigationBarTitleText": "错题集"
 }
