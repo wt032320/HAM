@@ -7,7 +7,7 @@ import {
 export default function request(api, method, data, {
     noAuth = false,
     customHeader = null,
-    baseURL =  "http://127.0.0.1:3000/" //"https://qc4vl7.app.cloudendpoint.cn/" //
+    baseURL =  "https://qc4vl7.app.cloudendpoint.cn/"   //"http://127.0.0.1:3000/"
 }) {
     let header = customHeader || HEADER
     const token = wx.getStorageSync('CACHE_TOKEN')

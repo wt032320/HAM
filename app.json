@@ -60,6 +60,7 @@
         "van-search": "/miniprogram_npm/@vant/weapp/search/index",
         "van-dropdown-menu": "/miniprogram_npm/@vant/weapp/dropdown-menu/index",
         "van-dropdown-item": "/miniprogram_npm/@vant/weapp/dropdown-item/index",
-        "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index"
+        "van-uploader": "/miniprogram_npm/@vant/weapp/uploader/index",
+        "van-notice-bar": "/miniprogram_npm/@vant/weapp/notice-bar/index"
     }
 }

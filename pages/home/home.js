@@ -1,20 +1,28 @@
 import { itemInfo } from '../../data/data'
-const socket = require("../../utils/socket.io");
+import { getNewsInfo } from '../../api/news'
 
 Page({
     data: {
-        itemInfo
+        itemInfo,
+        isScroll: true,
+        news_content: ""
     },
     onLoad() {
-        // socket.connect((status,ws)=>{
-        //     console.log(status)
-        //     console.log(ws)
-        //     if(status){
-        //       console.log('00000')
-        //       ws.on('res',(data)=>{
-        //         console.log(data)
-        //       })
-        //     }
-        // })
+       
+    },
+    onShow() {
+        getNewsInfo().then((res) => {
+            if (res.status === 200) {
+                this.setData({
+                    news_content: res.result[0].content,
+                    isScroll: true
+                })
+            } else if (res.status === 404){
+                this.setData({
+                    news_content: "暂无新闻～",
+                    isScroll: false
+                })
+            }
+        }) 
     }
 })

@@ -55,7 +55,7 @@ Page({
                         mask: true,
                         onClose: () => {
                             wx.navigateBack({
-                                delta: 0,
+                                delta: 1,
                             })
                         },
                     })

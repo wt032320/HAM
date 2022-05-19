@@ -1,4 +1,11 @@
 <view class="home-wrapper">
+    <van-notice-bar
+        scrollable="{{ isScroll }}"
+        color="#1989fa"
+        background="#ecf9ff"
+        left-icon="volume-o"
+        text="{{ news_content }}"
+    />
     <view class="top-wrapper">
         <view class="image-wrapper">
             <image
@@ -15,9 +22,9 @@
     </view>
     <view class="pages-wrapper">
         <HomeItem
-            wx:for="{{itemInfo}}"
+            wx:for="{{ itemInfo }}"
             wx:key="unique"
-            itemInfo="{{item}}"
+            itemInfo="{{ item }}"
         >
         </HomeItem>
     </view>
