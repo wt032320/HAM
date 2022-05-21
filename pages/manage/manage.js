@@ -10,7 +10,6 @@ Page({
      */
     data: {
         show: false,
-        isLogin: false,
         isEmail: false,
         isPhone: false,
         isSign: false,
@@ -51,6 +50,9 @@ Page({
               email: this.data.newEmail,
               phone: this.data.newPhone,
               sign: this.data.newSign,
+              isEmail: true,
+              isPhone: true,
+              isSign: true
             })
           }
        })

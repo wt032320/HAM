@@ -3,16 +3,16 @@
 <view class="category-wrapper">
     <view class="left-wrap">
         <view class="title">
-            {{examItemInfo.title}}
+            {{ examItemInfo.title }}
         </view>
         <view class="statistics">
             <iconfont name="zhishishuliang" class="icon"/>
             <view class="content content-l">
-                题量 {{examItemInfo.finish_quantity}}/{{examItemInfo.total_quantity}}
+                题量 {{ examItemInfo.finish_quantity }}/{{ examItemInfo.total_quantity }}
             </view>
             <iconfont name="zhengqueshuai" class="icon"/>
             <view class="content content-r">
-                正确率 {{examItemInfo.corrent_rate}}
+                正确率 {{ examItemInfo.corrent_rate }}
             </view>
         </view>
     </view>

@@ -3,11 +3,11 @@
     <van-dialog
         use-slot
         show="{{ show }}"
-        showConfirmButton="{{false}}"
+        showConfirmButton="{{ false }}"
         zIndex="99999"
     >
         <view class="tips-content flex_c_hv">
-            <van-button plain icon="wechat" type="primary"                custom-class="auth-btn" loading="{{loading}}"
+            <van-button plain icon="wechat" type="primary"                custom-class="auth-btn" loading="{{ loading }}"
             bind:click="getUserProfile">
             微信授权登录
             </van-button>

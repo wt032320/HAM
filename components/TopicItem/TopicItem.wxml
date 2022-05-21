@@ -1,54 +1,54 @@
 <!--components/TopicItem/TopicItem.wxml-->
 <view class="item-wrap">
     <view class="title-bar">
-        <text class="topic-number">第{{topicData.number}}题</text>
-        <text class="topic-number">{{topicData.number}}/5
+        <text class="topic-number">第{{ topicData.number }}题</text>
+        <text class="topic-number">{{ topicData.number }}/5
         </text>
     </view>
     <view>
         <view class="questionTitle">
-            <text class="type">【{{topicData.type}}】</text>{{topicData.question}}
+            <text class="type">【{{ topicData.type }}】</text>{{ topicData.question }}
         </view>
         <view>
             <view
-                class="noChose {{isTrueA}}"
+                class="noChose {{ isTrueA }}"
                 bindtap="{{ handleTap }}"
                 data-choseitem="A"
-                data-titletag="{{topicData.serialNumber}}"
-                data-topicid="{{topicData._id}}"
+                data-titletag="{{ topicData.serialNumber }}"
+                data-topicid="{{ topicData._id }}"
             >
-                A. {{topicData.options[0].content}}
+                A. {{ topicData.options[0].content }}
             </view>
             <view
-                class="noChose {{isTrueB}}"
+                class="noChose {{ isTrueB }}"
                 bindtap="{{ handleTap }}"
                 data-choseitem="B"
-                data-titletag="{{topicData.serialNumber}}"
-                data-topicid="{{topicData._id}}"
+                data-titletag="{{ topicData.serialNumber }}"
+                data-topicid="{{ topicData._id }}"
             >
-                B. {{topicData.options[1].content}}
+                B. {{ topicData.options[1].content }}
             </view>
             <view
-                class="noChose {{isTrueC}}"
+                class="noChose {{ isTrueC }}"
                 bindtap="{{ handleTap }}"
                 data-choseitem="C"
-                data-titletag="{{topicData.serialNumber}}"
-                data-topicid="{{topicData._id}}"
+                data-titletag="{{ topicData.serialNumber }}"
+                data-topicid="{{ topicData._id }}"
             >
-                C. {{topicData.options[2].content}}
+                C. {{ topicData.options[2].content }}
             </view>
             <view
-                class="noChose {{isTrueD}}"
+                class="noChose {{ isTrueD }}"
                 bindtap="{{ handleTap }}"
                 data-choseitem="D"
-                data-titletag="{{topicData.serialNumber}}"
-                data-topicid="{{topicData._id}}"
+                data-titletag="{{ topicData.serialNumber }}"
+                data-topicid="{{ topicData._id }}"
             >
-                D. {{topicData.options[3].content}}
+                D. {{ topicData.options[3].content }}
             </view>
         </view>
-        <view wx:if="{{showResult == true}}" class="result-wrap">
-            <view class="result">正确答案：<text style="color: #3399CC;">{{topicData.correctOption}}</text></view>
+        <view wx:if="{{ showResult == true }}" class="result-wrap">
+            <view class="result">正确答案：<text style="color: #3399CC;">{{ topicData.correctOption }}</text></view>
         </view>
     </view>
 </view>

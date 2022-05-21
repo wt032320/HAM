@@ -1,17 +1,17 @@
 <!--components/TopoicCard/TopicCard.wxml-->
 <view class="one-card">
     <van-collapse value="{{ activeNames }}" bind:change="onChange">
-        <van-collapse-item name="{{itemInfo.index}}" size="large">
+        <van-collapse-item name="{{ itemInfo.index }}" size="large">
             <view  class="custom" slot="title">
                 <van-icon name="question-o" />
-                {{itemInfo.question}}
+                {{ itemInfo.question }}
             </view>
-            <view class="topic-title">{{itemInfo.index}}. {{itemInfo.question}}</view>
-            <view>A.{{itemInfo.options[0].content}}</view>
-            <view>B.{{itemInfo.options[1].content}}</view>
-            <view>C.{{itemInfo.options[2].content}}</view>
-            <view>D.{{itemInfo.options[3].content}}</view>
-            <view class="answer">答案：{{itemInfo.correctOption}}</view>
+            <view class="topic-title">{{ itemInfo.index }}. {{ itemInfo.question }}</view>
+            <view>A.{{ itemInfo.options[0].content }}</view>
+            <view>B.{{ itemInfo.options[1].content }}</view>
+            <view>C.{{ itemInfo.options[2].content }}</view>
+            <view>D.{{ itemInfo.options[3].content }}</view>
+            <view class="answer">答案：{{ itemInfo.correctOption }}</view>
         </van-collapse-item>
     </van-collapse>
 </view>

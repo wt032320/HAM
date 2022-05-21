@@ -1,8 +1,8 @@
 <!--pages/gather/gather.wxml-->
 <view class="topic-wrap">
-    <view class="card-wrap" wx:if="{{hasData}}">
-        <block wx:for="{{topicList}}" wx:key="unique">
-            <TopicCard  itemInfo="{{item}}"></TopicCard>
+    <view class="card-wrap" wx:if="{{ hasData }}">
+        <block wx:for="{{ topicList }}" wx:key="unique">
+            <TopicCard  itemInfo="{{ item }}"></TopicCard>
         </block>
     </view> 
     <view wx:else class="no-data">

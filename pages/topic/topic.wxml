@@ -4,7 +4,7 @@
         <van-button
             plain 
             size="small"
-            disabled="{{isDisabledOn}}"
+            disabled="{{ isDisabledOn }}"
             color="#3399CC"
             bindtap="bindOnTap"
         >上一题</van-button>
@@ -12,7 +12,7 @@
     <view class="right-model normal">
         <van-button
             plain
-            disabled="{{isDisabledNext}}"
+            disabled="{{ isDisabledNext }}"
             size="small"
             color="#3399CC"
             bindtap="bindNextTap"
@@ -22,16 +22,16 @@
 <scroll-view scroll-y="true"  style="height: 93vh">
     <swiper
         class="main-continer"
-        current="{{currentTab}}"
+        current="{{ currentTab }}"
         bindchange="bindChange"
-        duration="{{duration}}"
-        easing-function="{{easing}}"
+        duration="{{ duration }}"
+        easing-function="{{ easing }}"
     >
-        <block wx:for="{{topicData}}" wx:key="index">
+        <block wx:for="{{ topicData }}" wx:key="index">
             <swiper-item>
                 <TopicItem
                     bindemitIdFun="emitIdFun"
-                    topicData="{{item}}"
+                    topicData="{{ item }}"
                 >
                 </TopicItem>
             </swiper-item>
@@ -44,15 +44,15 @@
         class="left-model bottom-left"
         bindtap="colloectFun"
     >
-        <iconfont name="{{fontName}}" class="icon"/>
-        <text class="{{fontName}}">收藏</text>
+        <iconfont name="{{ fontName }}" class="icon"/>
+        <text class="{{ fontName }}">收藏</text>
     </view>
     <view
         class="right-model bottom-right"
         bindtap="wrongTopicFun"
     >
-        <iconfont name="{{fontClass}}" class="icon"/>
-        <text class="{{fontClass}}">错题</text>
+        <iconfont name="{{ fontClass }}" class="icon"/>
+        <text class="{{ fontClass }}">错题</text>
     </view>
     <van-toast id="van-toast" />
 </view>

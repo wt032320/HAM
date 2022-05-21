@@ -2,14 +2,14 @@
 <view class="article-wrap">
     <view class="page-section">
         <view class="title-wrap">
-            {{title}}
+            {{ title }}
         </view>
         <view class="info-wrap">
-            <view class="text">{{author}}</view>
-            <view class="text">{{time}}</view>
+            <view class="text">{{ author }}</view>
+            <view class="text">{{ time }}</view>
         </view>
         <view class="page-content">
-            <rich-text nodes="{{htmlSnip}}"></rich-text>
+            <rich-text nodes="{{ htmlSnip }}"></rich-text>
         </view>
     </view>
 </view>

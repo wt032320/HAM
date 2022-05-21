@@ -1,15 +1,15 @@
 <view class="item-wrapper">
-    <text class="title">{{itemInfo.title}}</text>
+    <text class="title">{{ itemInfo.title }}</text>
     <view class="contents-wrapper">
         <view
-            wx:for="{{itemInfo.item}}"
+            wx:for="{{ itemInfo.item }}"
             wx:key="unique"
-            data-router="{{item.router}}"
+            data-router="{{ item.router }}"
             bindtap="bindViewTap"
             class="content-wrapper"
         >
-            <iconfont name="{{item.icon}}" class="icon"/>
-            <text class="content">{{item.content}}</text>
+            <iconfont name="{{ item.icon }}" class="icon"/>
+            <text class="content">{{ item.content }}</text>
         </view>
     </view>
 </view>

@@ -1,41 +1,41 @@
 <!--components/ExamItem/ExamItem.wxml-->
 <view class="item-wrap">
-    <view class="type">【{{topicData.type}}】</view>
+    <view class="type">【{{ topicData.type }}】</view>
     <view class="questionTitle">
-        {{topicData.number}}.{{topicData.question}}
+        {{ topicData.number }}.{{ topicData.question }}
     </view>
     <view>
         <view
-            class="noChose {{isChoseA}}"
+            class="noChose {{ isChoseA }}"
             bindtap="{{ handleTap }}"
             data-choseitem="A"
-            data-topicid="{{topicData._id}}"
+            data-topicid="{{ topicData._id }}"
         >
-            A. {{topicData.options[0].content}}
+            A. {{ topicData.options[0].content }}
         </view>
         <view
-            class="noChose {{isChoseB}}"
+            class="noChose {{ isChoseB }}"
             bindtap="{{ handleTap }}"
             data-choseitem="B"
-            data-topicid="{{topicData._id}}"
+            data-topicid="{{ topicData._id }}"
         >
-            B. {{topicData.options[1].content}}
+            B. {{ topicData.options[1].content }}
         </view>
         <view
-            class="noChose {{isChoseC}}"
+            class="noChose {{ isChoseC }}"
             bindtap="{{ handleTap }}"
             data-choseitem="C"
-            data-topicid="{{topicData._id}}"
+            data-topicid="{{ topicData._id }}"
         >
-            C. {{topicData.options[2].content}}
+            C. {{ topicData.options[2].content }}
         </view>
         <view
-            class="noChose {{isChoseD}}"
+            class="noChose {{ isChoseD }}"
             bindtap="{{ handleTap }}"
             data-choseitem="D"
-            data-topicid="{{topicData._id}}"
+            data-topicid="{{ topicData._id }}"
         >
-            D. {{topicData.options[3].content}}
+            D. {{ topicData.options[3].content }}
         </view>
     </view>
 </view>

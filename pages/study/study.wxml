@@ -11,9 +11,9 @@
         </van-search>
     </view>
     <view class="main-wrap">
-        <scroll-view scroll-y="true" class="scroll" wx:if="{{hasData}}">
-            <block wx:for="{{studyInfo}}" wx:key="unqiue">
-                <StudyCard infoItem="{{item}}"></StudyCard>
+        <scroll-view scroll-y="true" class="scroll" wx:if="{{ hasData }}">
+            <block wx:for="{{ studyInfo }}" wx:key="unqiue">
+                <StudyCard infoItem="{{ item }}"></StudyCard>
             </block> 
         </scroll-view>
         <view wx:else class="no-data">

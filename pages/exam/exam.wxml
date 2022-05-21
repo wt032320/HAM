@@ -103,10 +103,10 @@
                         wx:for-item="index"
                         wx:key="index"
                         bindtap="toDetail"
-                        data-item="{{index}}"
+                        data-item="{{ index }}"
                     >
                         <view  class="number-content {{set.setClass(isChoseList, index + 1)}}">
-                            {{index+1}}
+                            {{ index+1 }}
                         </view>
                     </van-grid-item>
                 </van-grid>

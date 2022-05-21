@@ -1,7 +1,7 @@
 <view class="home-wrapper">
     <van-notice-bar
         scrollable="{{ isScroll }}"
-        color="#1989fa"
+        color="#3399CC"
         background="#ecf9ff"
         left-icon="volume-o"
         text="{{ news_content }}"

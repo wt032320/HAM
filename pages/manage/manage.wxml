@@ -3,40 +3,40 @@
     <view class="content">
       <view class="content-info" bindtap="dialog">
         <iconfont name="youxiang" class="icon"/>
-        <view wx:if="{{!isEmail}}" class="userinfo-wrap">
+        <view wx:if="{{ !isEmail }}" class="userinfo-wrap">
           <view>邮箱:</view>
           <view class="info-content">快去设置你的邮箱吧～</view>
           <iconfont name="youjiantouxialajiantou" class="icon"/>
         </view>
         <view wx:else class="userinfo-wrap">
           <view>邮箱:</view>
-          <view class="info-content">{{email}}</view>
+          <view class="info-content">{{ email }}</view>
           <iconfont name="youjiantouxialajiantou" class="icon"/>
         </view>
       </view>
       <view class="content-info special" bindtap="dialog">
         <iconfont name="shoujihao" class="icon"/>
-        <view wx:if="{{!isPhone}}" class="userinfo-wrap">
+        <view wx:if="{{ !isPhone }}" class="userinfo-wrap">
           <view>手机号:</view>
           <view class="info-content">快去设置你的手机号吧～</view>
           <iconfont name="youjiantouxialajiantou" class="icon"/>
         </view>
         <view wx:else class="userinfo-wrap">
           <view>手机号:</view>
-          <view class="info-content">{{phone}}</view>
+          <view class="info-content">{{ phone }}</view>
           <iconfont name="youjiantouxialajiantou" class="icon"/>
         </view>
       </view>
       <view class="content-info" bindtap="dialog">
         <iconfont name="gexingqianming" class="icon"/>
-        <view wx:if="{{!isSign}}" class="userinfo-wrap">
+        <view wx:if="{{ !isSign }}" class="userinfo-wrap">
           <view>个性签名:</view>
           <view class="info-content">快去设置你的个性签名吧～</view>
           <iconfont name="youjiantouxialajiantou" class="icon"/>
         </view>
         <view wx:else class="userinfo-wrap">
           <view>个性签名:</view>
-          <view class="info-content">{{sign}}</view>
+          <view class="info-content">{{ sign }}</view>
           <iconfont name="youjiantouxialajiantou" class="icon"/>
         </view>
       </view>

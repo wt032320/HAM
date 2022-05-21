@@ -28,29 +28,29 @@
       </view>
       <view class="content-info special">
         <iconfont name="shoujihao" class="icon"/>
-        <view wx:if="{{!isPhone}}" class="userinfo-wrap">
+        <view wx:if="{{ !isPhone }}" class="userinfo-wrap">
           <view>手机号:</view>
           <view class="info-content">快去设置你的手机号吧～</view>
         </view>
         <view wx:else class="userinfo-wrap">
           <view>手机号:</view>
-          <view class="info-content">{{phone}}</view>
+          <view class="info-content">{{ phone }}</view>
         </view>
       </view>
       <view class="content-info">
         <iconfont name="gexingqianming" class="icon"/>
-        <view wx:if="{{!isSign}}" class="userinfo-wrap">
+        <view wx:if="{{ !isSign }}" class="userinfo-wrap">
           <view>个性签名:</view>
           <view class="info-content">快去设置你的个性签名吧～</view>
         </view>
         <view wx:else class="userinfo-wrap">
           <view>个性签名:</view>
-          <view class="info-content">{{sign}}</view>
+          <view class="info-content">{{ sign }}</view>
         </view>
       </view>
     </view>
   </view>
-  <view class="info-bottom" wx:if="{{isLogin}}">
+  <view class="info-bottom" wx:if="{{ isLogin }}">
     <view class="log-out" bindtap="dialog">
       退出登录
     </view>

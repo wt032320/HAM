@@ -2,9 +2,9 @@
 
 <view class="exercise-wrapper">
     <CategoryItem
-        wx:for="{{examItemInfo}}"
+        wx:for="{{ examItemInfo }}"
         wx:key="unique"
-        examItemInfo="{{item}}"
+        examItemInfo="{{ item }}"
     >
     </CategoryItem>
 </view>
