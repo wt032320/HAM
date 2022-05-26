@@ -1,7 +1,0 @@
-/* pages/exercise/exercise.wxss */
-
-.exercise-wrapper {
-    min-height: 100vh;
-    background-color: #eeeeee;
-    overflow: hidden;
-}

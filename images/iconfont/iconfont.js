@@ -1,6 +1,6 @@
 Component({
   properties: {
-    // kaoshijilu | wode1 | wode1-copy | shouye | shouye-true | youjiantouxialajiantou | gexingqianming | youxiang | shoujihao | yishoucang | shoucang | cuotiji | yicuotiji | zhishishuliang | zhengqueshuai | shoucang1 | yonghuxinxiguanli | shiti1 | zhinengxuexipingtai | luntanzhongxin | kaoshi_1 | ceshi | xuexizhongxin
+    // nianling | xinzengwenzhang | kaoshijilu | wode1 | wode1-copy | shouye | shouye-true | youjiantouxialajiantou | gexingqianming | youxiang | shoujihao | yishoucang | shoucang | cuotiji | yicuotiji | zhishishuliang | zhengqueshuai | shoucang1 | yonghuxinxiguanli | shiti1 | zhinengxuexipingtai | luntanzhongxin | kaoshi_1 | ceshi | xuexizhongxin
     name: {
       type: String,
     },

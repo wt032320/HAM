@@ -2,6 +2,19 @@
 <view class="manage-wrap">
     <view class="content">
       <view class="content-info" bindtap="dialog">
+        <iconfont name="nianling" class="icon"/>
+        <view wx:if="{{ !isAge }}" class="userinfo-wrap">
+          <view>年龄:</view>
+          <view class="info-content">快去设置你年龄吧～</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+        <view wx:else class="userinfo-wrap">
+          <view>年龄:</view>
+          <view class="info-content">{{ age }}岁</view>
+          <iconfont name="youjiantouxialajiantou" class="icon"/>
+        </view>
+      </view>
+      <view class="content-info" bindtap="dialog">
         <iconfont name="youxiang" class="icon"/>
         <view wx:if="{{ !isEmail }}" class="userinfo-wrap">
           <view>邮箱:</view>
@@ -50,6 +63,15 @@
         bind:confirm="setUserInfo"
     >
     <van-cell-group>
+        <van-field
+            clearable
+            model:value="{{ newAge }}"
+            type="text"
+            label="年龄"
+            left-icon="chat-o"
+            placeholder="请输入年龄～"
+        />
+
         <van-field
             clearable
             model:value="{{ newEmail }}"

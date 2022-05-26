@@ -181,7 +181,7 @@ Page({
             title: '加载中～',
           })
           const tag = wx.getStorageSync('TITLE_TAG')
-          const data = { startIndex: tag || 0 }
+          const data = { startIndex: tag + 1 || 0 }
           getTopicList(data).then((res) => {
             let lists = []
             lists = res.lists

@@ -13,9 +13,12 @@ Page({
         isEmail: false,
         isPhone: false,
         isSign: false,
+        isAge: false,
+        age: '',
         email: '',
         phone: '',
         sign: '',
+        newAge: '',
         newEmail: '',
         newPhone: '',
         newSign: ''
@@ -34,7 +37,8 @@ Page({
             data: {
                 phone: this.data.newPhone,
                 email: this.data.newEmail,
-                sign: this.data.newSign
+                sign: this.data.newSign,
+                age: this.data.newAge
             }
         }
        updateUserInfo(submitData).then((res) => {
@@ -50,9 +54,11 @@ Page({
               email: this.data.newEmail,
               phone: this.data.newPhone,
               sign: this.data.newSign,
+              age: this.data.newAge,
               isEmail: true,
               isPhone: true,
-              isSign: true
+              isSign: true,
+              isAge: true
             })
           }
        })
@@ -102,6 +108,14 @@ Page({
             isSign: true,
             sign: userInfo.sign,
             newSign: userInfo.sign
+          })
+        }
+
+        if (userInfo.age) {
+          this.setData({
+            isAge: true,
+            age: userInfo.age,
+            newAge: userInfo.age
           })
         }
       }
